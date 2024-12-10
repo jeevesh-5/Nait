@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Innovation Hub - NAIT</title>
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        /* Header with Background Image */
+        header {
+            background: url('https://www.nait.ca/NAIT/media/nait-ca-content/maps/main-campus.jpg?ext=.jpg') no-repeat center center/cover;
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+            width: 100%;
+            height: 350px;
+            position: relative;
+        }
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 0;
+        }
+        header h1, header p {
+            position: relative;
+            z-index: 1;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 3.5em;
+            font-weight: bold;
+        }
+        header p {
+            font-size: 1.5em;
+            margin-top: 10px;
+        }
+
+        /* Navigation Bar */
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #00468b;
+            padding: 15px 0;
+        }
+        nav a {
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+            text-transform: uppercase;
+        }
+        nav a:hover {
+            background-color: #003366;
+            transition: 0.3s;
+        }
+
+        /* Layout */
+        .content-container {
+            display: flex;
+            margin: 0 auto;
+            max-width: 1400px;
+            padding: 20px;
+        }
+
+        .main-content {
+            flex: 3;
+            margin-right: 20px;
+        }
+
+        .contact-sidebar {
+            flex: 1;
+            background-color: #f8f8f8;
+            padding: 15px;
+            border-left: 3px solid #00468b;
+            height: calc(100vh - 100px);
+            position: fixed;
+            right: 0;
+            top: 100px;
+            overflow-y: auto;
+            width: 280px; /* Reduced Width */
+            box-shadow: -2px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Sidebar Content */
+        .contact-sidebar h2 {
+            margin-top: 0;
+            color: #00468b;
+            font-size: 1.3em;
+        }
+        .contact-sidebar p {
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+        .contact-sidebar form label {
+            font-size: 0.85em;
+            margin-bottom: 5px;
+            display: block;
+        }
+        .contact-sidebar form input,
+        .contact-sidebar form textarea,
+        .contact-sidebar form button {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 0.85em;
+        }
+        .contact-sidebar form button {
+            background-color: #00468b;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .contact-sidebar form button:hover {
+            background-color: #003366;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #00468b;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .content-container {
+                flex-direction: column;
+                padding: 10px;
+            }
+            .main-content {
+                margin-right: 0;
+            }
+            .contact-sidebar {
+                position: relative;
+                width: 100%;
+                border-left: none;
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Innovation Hub at NAIT</h1>
+        <p>Empowering Students to Innovate and Collaborate</p>
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#features">Features</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#why-the-hub">Why the Hub?</a>
+        <a href="#contact-us">Contact</a>
+    </nav>
+
+    <div class="content-container">
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="accordion" id="about">
+                <h2>About the Innovation Hub</h2>
+                <div class="content">
+                    <p>The Innovation Hub bridges the gap between theoretical knowledge and practical application. It provides students a real-world platform to develop, test, and refine their innovative ideas while collaborating with peers and mentors.</p>
+                </div>
+            </div>
+            <div class="accordion" id="features">
+                <h2>Features</h2>
+                <div class="content">
+                    <ul>
+                        <li>Advanced Prototyping Tools</li>
+                        <li>Expert Mentorship</li>
+                        <li>Funding Opportunities</li>
+                        <li>Networking Events</li>
+                        <li>Workshops and Training</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="accordion" id="how-it-works">
+                <h2>How It Works</h2>
+                <div class="content">
+                    <ol>
+                        <li>Submit your idea through the online portal.</li>
+                        <li>Connect with mentors and peers.</li>
+                        <li>Develop and refine your prototype.</li>
+                        <li>Present your project to stakeholders.</li>
+                        <li>Implement your idea in real-world scenarios.</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="accordion" id="why-the-hub">
+                <h2>Why Join the Innovation Hub?</h2>
+                <div class="content">
+                    <p>Joining the hub provides hands-on experience, builds professional networks, and enhances career prospects while making a real-world impact. Students receive unparalleled resources to transform their ideas into reality.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="contact-sidebar" id="contact-us">
+            <h2>Contact Us</h2>
+            <p>Have a question? Reach out to us:</p>
+            <form>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="3" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </aside>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Innovation Hub at NAIT. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Toggle Accordion
+        document.querySelectorAll('.accordion h2').forEach(header => {
+            header.addEventListener('click', () => {
+                const content = header.nextElementSibling;
+                content.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>
